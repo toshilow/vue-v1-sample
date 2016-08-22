@@ -23,5 +23,10 @@ module.exports = {
 			},
     ]
 	},
-	devtool: ['cheap-source-map']
+	devtool: ['cheap-source-map'],
+	babel: {
+		"presets": ["es2015", "stage-2"],
+		"plugins": ["transform-runtime"],
+		"comments": false
+	}
 }
