@@ -9,12 +9,8 @@ module.exports = {
 	module: {
 		loaders: [
 			{
-				test: /\.scss$/,
-				loader: 'style-loader!css-loader!sass-loader'
-			},
-			{
-				test: /\.html$/,
-				loader: "html"
+				test: /\.vue$/,
+				loader: 'vue'
 			},
 			{
 				test: /\.js$/,
@@ -23,5 +19,9 @@ module.exports = {
 			},
     ]
 	},
-	devtool: ['cheap-source-map']
+	devtool: ['cheap-source-map'],
+	babel: {
+		presets: ['es2015'],
+		plugins: ['transform-runtime']
+	}
 }
