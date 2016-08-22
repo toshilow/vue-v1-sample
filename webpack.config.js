@@ -9,7 +9,7 @@ module.exports = {
 	module: {
 		loaders: [
 			{
-				test: /\.scss$/,
+				test: /\.scss$|\.sass$/,
 				loader: 'style-loader!css-loader!sass-loader'
 			},
 			{
@@ -20,7 +20,7 @@ module.exports = {
 				test: /\.js$/,
 				loader: 'babel',
 				exclude: /node_modules/
-			},
+			}
     ]
 	},
 	devtool: ['cheap-source-map'],

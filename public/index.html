@@ -1,13 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 </head>
 
-<body id="app"p>
-  <App></App>
+<body id="app">
+  <section class="hero is-light is-small">
+    <header class="nav has-shadow">
+      <div class="container">
+        <div class="nav-left">
+          <a v-link="{path: '/'}" class="nav-item is-tab">Top</a>
+          <a v-link="{path: '/tasks'}" class="nav-item is-tab">Tasks</a>
+        </div>
+      </div>
+    </header>
+  </section>
+  <router-view></router-view>
+  <script src="/main.js"></script>
 </body>
-<script src="/main.js"></script>
 </html>

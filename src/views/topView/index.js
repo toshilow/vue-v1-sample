@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import template from './app.html'
+import template from './template.html'
 
 export default Vue.extend({
   template: template,

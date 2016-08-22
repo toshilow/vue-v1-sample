@@ -4,13 +4,18 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 const state = {
-  count: 0
+  posts: [
+    {title:'first post', body:'本日は晴天なり'}
+  ]
 }
 
 const mutations = {
-  INCREMENT (state, amount) {
-    state.count = state.count + amount
-  }
+  ADD_POST (state, post) {
+    state.posts.push(post)
+  },
+  DELETE_POST (state, index) {
+    state.posts.splice(index, 1)
+  },
 }
 
 export default new Vuex.Store({
