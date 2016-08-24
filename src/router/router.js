@@ -5,15 +5,11 @@ import Posts from '../views/postsView'
 
 Vue.use(VueRouter)
 
-var router = new VueRouter()
-
-router.map({
-  "/": {
-    component: Top
-  },
-  "/posts": {
-    component: Posts
-  },
+var router = new VueRouter({
+  routes: [
+    { path: '/', component: Top},
+    { path: '/posts', component: Posts},
+  ]
 })
 
 export default router

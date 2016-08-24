@@ -6,18 +6,20 @@
   <title>Document</title>
 </head>
 
-<body id="app">
-  <section class="hero is-light is-small">
-    <header class="nav has-shadow">
-      <div class="container">
-        <div class="nav-left">
-          <a v-link="{path: '/'}" class="nav-item is-tab">Top</a>
-          <a v-link="{path: '/posts'}" class="nav-item is-tab">Posts</a>
+<body>
+  <div id="app">
+    <section class="hero is-light is-small">
+      <header class="nav has-shadow">
+        <div class="container">
+          <div class="nav-left">
+            <router-link to="/" class="nav-item is-tab">Top</router-link>
+            <router-link to="/posts" class="nav-item is-tab">Posts</router-link>
+          </div>
         </div>
-      </div>
-    </header>
-  </section>
-  <router-view></router-view>
+      </header>
+    </section>
+    <router-view></router-view>
+  </div>
   <script src="/main.js"></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 <section class="section">
-  <article class="media" v-for="post in posts">
+  <article class="media" v-for="(post, index) in posts">
     <div class="media-content">
       <div class="content">
         <p>
@@ -10,7 +10,7 @@
       </div>
     </div>
     <div class="media-right">
-      <button class="delete" @click="deletePost($index)"></button>
+      <button class="delete" @click="deletePost(index)"></button>
     </div>
   </article>
   <article>

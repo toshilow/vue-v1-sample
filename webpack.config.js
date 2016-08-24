@@ -6,6 +6,11 @@ module.exports = {
 		path: path.join(__dirname, 'build'),
 		filename: 'main.js'
 	},
+	resolve: {
+		alias: {
+			vue: 'vue/dist/vue.js'
+		}
+	},
 	module: {
 		loaders: [
 			{
@@ -20,7 +25,7 @@ module.exports = {
 				test: /\.js$/,
 				loader: 'babel',
 				exclude: /node_modules/
-			}
+			},
     ]
 	},
 	devtool: ['cheap-source-map'],

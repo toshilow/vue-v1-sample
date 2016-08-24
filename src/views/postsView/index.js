@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import template from './template.html'
-import { addPost, deletePost } from "../../vuex/actions"
+import { mapGetters, mapActions } from 'vuex'
 
 export default Vue.extend({
   template: template,
@@ -9,15 +9,11 @@ export default Vue.extend({
       newPost: {title:'', body:''}
     }
   },
-  vuex: {
-    getters: {
-      posts: state => state.posts
-    },
-    actions: {
-      addPost,deletePost
-    }
+  computed: {
+    ...mapGetters(['posts'])
   },
   methods: {
+    ...mapActions(['addPost', 'deletePost']),
     save: function() {
       this.addPost(this.newPost)
       this.newPost = {title:'', body:''}
