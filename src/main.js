@@ -1,8 +1,10 @@
+import 'bulma/bulma.sass'
 import Vue from 'vue'
-import App from './components/app/app'
+import { sync } from 'vuex-router-sync'
+import store from './vuex/store'
 
-/* eslint-disable no-new */
-new Vue({
-  el: '#app',
-  components: { App }
-})
+import router from './router/router'
+
+sync(store, router)
+
+router.start(Vue.extend({store}), '#app')

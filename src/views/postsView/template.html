@@ -1,0 +1,28 @@
+<section class="section">
+  <article class="media" v-for="post in posts">
+    <div class="media-content">
+      <div class="content">
+        <p>
+          <strong>{{post.title}}</strong>
+          <br>
+          {{post.body}}
+        </p>
+      </div>
+    </div>
+    <div class="media-right">
+      <button class="delete" @click="deletePost($index)"></button>
+    </div>
+  </article>
+  <article>
+    <div class="control">
+      <p class="control is-expanded">
+        <input class="input" type="text" placeholder="title" v-model="newPost.title">
+        <textarea class="textarea" placeholder="body" v-model="newPost.body"></textarea>
+      </p>
+      <p class="control">
+        <a class="button is-info" @click="save()"> Save </a>
+      </p>
+    </div>
+  </article>
+</section>
+

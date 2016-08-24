@@ -1,13 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 
 <head>
   <meta charset="UTF-8">
   <title>Vue 1</title>
 </head>
 
-<body id="app"p>
-  <App></App>
+<body id="app">
+  <section class="hero is-light is-small">
+    <header class="nav has-shadow">
+      <div class="container">
+        <div class="nav-left">
+          <a v-link="{path: '/'}" class="nav-item is-tab">Top</a>
+          <a v-link="{path: '/posts'}" class="nav-item is-tab">Posts</a>
+        </div>
+      </div>
+    </header>
+  </section>
+  <router-view></router-view>
+  <script src="/main.js"></script>
 </body>
-<script src="main.js"></script>
 </html>
