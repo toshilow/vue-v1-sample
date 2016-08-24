@@ -1,6 +1,6 @@
-export const addPost = function ({ dispatch, state }, post) {
-  dispatch('ADD_POST', post)
+export const addPost = function ({ commit, state }, post) {
+  commit('ADD_POST', post)
 }
-export const deletePost = function ({ dispatch, state }, index) {
-  dispatch('DELETE_POST', index)
+export const deletePost = function ({ commit, state }, index) {
+  commit('DELETE_POST', index)
 }
