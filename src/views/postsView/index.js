@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import template from './template.html'
-
-import { addPost, deletePost } from "../../vuex/action"
+import { addPost, deletePost } from "../../vuex/actions"
 
 export default Vue.extend({
   template: template,
